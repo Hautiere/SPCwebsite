@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-SPC Analysis website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- menu smartphone  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css--> 
+
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="Index.html"><img src="images/Logo.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+        <!-- menu close smartphone  -->
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+
+          <ul>
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="videos.html">TUTOS</a></li>
+            <li><a href="SPCgraphs.html">ANALYZE</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </div>
+            <!-- menu bars smartphone  -->
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+
+      </nav>
+      
+      <h1> Our Tutorials </h1>
+
+    </section>        
+
+<!-- Tutos page -->
+
+    <section class="tutos">
+      
+      <div class="container">
+        
+        <div class="main-video">
+          <div class="video">
+            <video src="images/vid1.mp4" controls muted autoplay></video>
+              <h3 class="title">01. main video </h3>
+          </div>
+        </div>
+
+        <div class="video-list">
+          <div class="vid active">
+            <video class="thumbnail" src="images/vid1.mp4" controls muted autoplay></video>
+            <h3 class="title">01. video </h3>
+          </div>
+
+          <div class="vid">
+            <video class="thumbnail" src="images/vid1.mp4" controls muted autoplay></video>
+            <h3 class="title">02. video</h3>
+          </div>
+          
+
+          <div class="vid">
+            <video class="thumbnail" src="images/vid1.mp4" controls muted autoplay></video>
+            <h3 class="title">03. video </h3>
+          </div>
+
+          <div class="vid">
+            <video class="thumbnail" src="images/vid1.mp4" controls muted autoplay></video>
+            <h3 class="title">04. video </h3>
+          </div>
+
+          <div class="vid">
+            <video class="thumbnail" src="images/vid1.mp4" controls muted autoplay></video>
+            <h3 class="title">05. video </h3>
+          </div>
+
+          
+        </div>
+
+      </div>
+
+      <!-- script video YT
+      <script>
+        
+        let listVideo = document.querySelector('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video .video');
+        let title = document.querySelector('.main-video .title');
+
+        listVideo.forEach ((video =>{ 
+          video.onclick = () =>{
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            video.classList.add('active');
+            if(video.classList.contains("active")){ 
+              let src = video.children[0].getAttribute('src');
+              mainVideo.src = src;
+              let text = video.children[1].innerHTML;
+              title.innerHTML = text;
+            };    
+          };  
+        });
+
+      </script>
+     -->
+
+      <!-- script video corrigé ChatGPT  
+      modifications suivantes :
+      querySelectorAll au lieu de querySelector pour sélect les éléments de classe .video-list .vid.
+      addEventListener au lieu de onclick pour gérer les clics sur les vidéos.
+      querySelector au lieu de children[0] pour sélectionner l'élément <video> et children[1] pour sélectionner l'élément .title à l'intérieur de chaque vidéo.
+      window.addEventListener('DOMContentLoaded', ...) pour s'assurer que le script s'exécute lorsque le contenu de la page est chargé.
+      
+      
+      
+      -->
+
+      <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    let listVideos = document.querySelectorAll('.video-list .vid');
+    let mainVideo = document.querySelector('.main-video video');
+    let title = document.querySelector('.main-video .title');
+
+    listVideos.forEach(video => {
+      video.addEventListener('click', () => {
+        listVideos.forEach(vid => vid.classList.remove('active'));
+        video.classList.add('active');
+        
+        if (video.classList.contains('active')) {
+          let src = video.querySelector('video').getAttribute('src');
+          mainVideo.src = src;
+          let text = video.querySelector('.title').innerHTML;
+          title.innerHTML = text;
+        }
+      });
+    });
+  });
+</script>
+
+
+
+    </section>
+<!----------- Footer  ------------>
+
+<section class="footer">
+    <h4> About Us</h4>
+    <p> fzefze fzefzefz efzefzgt fzefzefz efzefzgt <br> fzefzefz efzefzgt  rhyt  jytkukyulyukuykukkt</p>
+    <div class="icons">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-linkedin"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter"></i>
+      
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by Francois h</p>
+  </section>
+
+
+
+    <!---- Javascript for toggle menu ------>
+
+    <script> 
+      var navLinks = document.getElementById("navLinks");
+      function showMenu (){
+      navLinks.style.right="0";
+      }
+      function hideMenu (){
+      navLinks.style.right="-200px";
+    }
+    </script>
+
+
+
+  </body>
+</html>

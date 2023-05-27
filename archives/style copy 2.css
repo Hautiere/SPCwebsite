@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+ } 
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+/*
+feuille de style pour une page d'en-tête de site web. 
+Le code CSS supprime les marges et les rembourrages par défaut pour tous les éléments 
+de la page (*), et définit un en-tête (".header") 
+avec une hauteur minimale de 100vh (hauteur de l'écran), 
+une largeur de 100%, une image de fond qui est 
+soit l'image "banner.png" soit un dégradé linéaire avec des couleurs RGBA, 
+positionnée au centre et couvrant l'ensemble de la zone d'en-tête. 
+Le positionnement est relatif pour permettre d'ajouter des éléments 
+supplémentaires dans l'en-tête si nécessaire.
+*/
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+/*
+En résumé, ce code CSS permet de créer un élément de navigation <nav> 
+centré verticalement et affichant les éléments enfants horizontalement, 
+avec un espacement égal entre eux et un rembourrage 
+de 2% en haut et en bas et de 6% à gauche et à droite.
+
+Le rembourrage (en anglais "padding") est utile pour créer de l'espace entre le contenu 
+d'un élément et ses bordures, ce qui améliore la lisibilité et la convivialité du site web. 
+5% 10%;" ajoute un rembourrage de 5% en haut et en bas et de 10% à gauche et à droite.
+
+*/
+
+

@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+ } 
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+/*
+feuille de style pour une page d'en-tête de site web. 
+Le code CSS que vous avez fourni supprime 
+les marges et les rembourrages par défaut pour tous les éléments 
+de la page (*), et définit un en-tête (".header") 
+avec une hauteur minimale de 100vh (hauteur de l'écran), 
+une largeur de 100%, une image de fond qui est 
+soit l'image "banner.png" soit un dégradé linéaire avec des couleurs RGBA, 
+positionnée au centre et couvrant l'ensemble de la zone d'en-tête. 
+Le positionnement est relatif pour permettre d'ajouter des éléments 
+supplémentaires dans l'en-tête si nécessaire.
